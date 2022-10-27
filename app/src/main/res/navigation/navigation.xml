@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/bottom_home">
+
+    <fragment
+        android:id="@+id/bottom_home"
+        android:name="com.example.moti.HomeScreenFragment"
+        android:label="ホーム"
+        tools:layout="@layout/home_screen_fragment" />
+    <fragment
+        android:id="@+id/bottom_ranking"
+        android:name="com.example.moti.RankingScreenFragment"
+        android:label="ランキング"
+        tools:layout="@layout/profile_screen_fragment" />
+    <fragment
+        android:id="@+id/bottom_profile"
+        android:name="com.example.moti.ProfileScreenFragment"
+        android:label="プロフィール"
+        tools:layout="@layout/ranking_screen_fragment" />
+    
+</navigation>
