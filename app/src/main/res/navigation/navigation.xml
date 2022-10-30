@@ -9,7 +9,11 @@
         android:id="@+id/bottom_home"
         android:name="com.example.moti.HomeScreenFragment"
         android:label="ホーム"
-        tools:layout="@layout/home_screen_fragment" />
+        tools:layout="@layout/home_screen_fragment" >
+        <action
+            android:id="@+id/action_bottom_home_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/bottom_ranking"
         android:name="com.example.moti.RankingScreenFragment"
@@ -20,5 +24,14 @@
         android:name="com.example.moti.ProfileScreenFragment"
         android:label="プロフィール"
         tools:layout="@layout/ranking_screen_fragment" />
-    
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.moti.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_bottom_home"
+            app:destination="@id/bottom_home" />
+    </fragment>
+
 </navigation>
