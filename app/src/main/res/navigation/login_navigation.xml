@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login_selection_Fragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.moti.LoginEmailFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_email" >
+        <action
+            android:id="@+id/login_email_To_login_password"
+            app:destination="@id/loginPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_selection_Fragment"
+        android:name="com.example.moti.LoginSelectionFragment"
+        android:label="login_selection"
+        tools:layout="@layout/login_selection" >
+        <action
+            android:id="@+id/login_selection_To_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginPasswordFragment"
+        android:name="com.example.moti.LoginPasswordFragment"
+        android:label="login_password"
+        tools:layout="@layout/login_password" />
+
+</navigation>
